@@ -21,6 +21,7 @@ var FONT_GAP = 5;
 var FONT_SIZE = 16;
 var LINE_HEIGHT = 20;
 var BOTTOM_GAP = 20;
+var TEXT = 'Ура вы победили!\nСписок результатов:';
 var TEXT_X = 150;
 var TEXT_Y = 30;
 var TEXT_COLOR = 'black';
@@ -57,10 +58,7 @@ window.renderStatistics = function (ctx, names, times) {
   ctx.fillStyle = TEXT_COLOR;
   ctx.font = FONT_SIZE + 'px' + FONT_STYLE;
 
-  // ctx.fillText('Ура вы победили!', 150, 30);
-  // ctx.fillText('Список результатов:', 150, 50);
-
-  renderText(ctx, 'Ура вы победили!\nСписок результатов:', TEXT_X, TEXT_Y);
+  renderText(ctx, TEXT, TEXT_X, TEXT_Y);
 
   var maxTime = getMaxElement(times);
 
